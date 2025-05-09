@@ -18,7 +18,7 @@ export default function Hero() {
               <span>Hi, I'm </span>
               <span className="gradient-text">Manish Pandey</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl text-neutral-700 font-semibold mb-6">Physics Researcher & Data Analyst</h2>
+            <h2 className="text-2xl md:text-3xl text-neutral-700 font-semibold mb-6">Physics Researcher</h2>
             <p className="text-lg text-neutral-700 mb-8 max-w-2xl">
               Exploring the fascinating intersections of theoretical physics, plasma physics, and 
               quantum computing. Currently pursuing my Bachelor of Science in Physics at St. Xavier's College,
@@ -32,13 +32,11 @@ export default function Hero() {
                 Get in Touch
               </a>
               <a 
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open('/Manish_Resume.pdf', '_blank');
-                }}
+                href="/Manish_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block text-primary border-2 border-primary hover:bg-primary hover:text-white rounded px-6 py-3 font-medium transition-colors"
-                download
+                download="Manish_Pandey_CV.pdf"
               >
                 Download CV
               </a>

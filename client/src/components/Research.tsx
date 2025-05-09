@@ -64,12 +64,12 @@ export default function Research() {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Vertical timeline line */}
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary bg-opacity-30 transform md:translate-x-px"></div>
+            <div className="hidden md:block absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary bg-opacity-30 transform md:translate-x-px"></div>
             
             {researchItems.map((item, index) => (
               <motion.div 
                 key={index} 
-                className="relative mb-16 last:mb-0"
+                className="relative mb-20 md:mb-16 last:mb-0"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

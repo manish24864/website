@@ -98,7 +98,7 @@ export default function Projects() {
                 <div className="flex justify-between items-start">
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                   {project.winner && (
-                    <span className="text-xs bg-secondary text-white px-2 py-1 rounded-full">Winner</span>
+                    <span className="text-xs bg-secondary text-white px-2 py-1 rounded-full">Global Nominee</span>
                   )}
                 </div>
                 <p className="text-neutral-600 text-sm mb-4">{project.date} | {project.organization}</p>
