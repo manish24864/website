@@ -1,0 +1,134 @@
+Create a fully responsive academic portfolio website for Manish Pandey, a physics student at St. Xavier's College, Tribhuvan University, Nepal. Use HTML, Tailwind CSS, and JavaScript or React (optional). The design should be clean, minimal, and professional for scientific use. Implement the following:
+
+🧑‍🎓 Header & Navigation
+Include name: Manish Pandey
+
+Subheading: Physics Student
+
+Menu: Home, About, Publications, Projects, Workshops, Blog, Contact
+
+Sticky header with smooth scrolling
+
+🖼️ Hero Section
+Add a cropped and edited personal photo of Manish
+
+Add introduction:
+
+Aspiring theoretical physicist with interests in quantum mechanics, computational physics, and space science at St. Xavier's College, Nepal.
+
+Add buttons: Contact Me, Learn More
+
+📖 About Section
+Title: About Me
+
+Text: Short bio on passion for theoretical physics, space science, computational physics
+
+Education:
+
+BSc in Physics – St. Xavier's College (2022–Present)
+
+High School (Science Stream) – Radiant Secondary School (2019–2021)
+
+Research Interests:
+
+Plasma Physics: Work at Khwopa College of Engineering
+
+General Relativity
+
+Theoretical Physics
+
+Computational Physics (Python, R, Quantum ESPRESSO)
+
+Famous equations line (E = mc² etc.)
+
+Add Download CV button (note: the button works but downloaded PDF is corrupt — investigate MIME or file error)
+
+📚 Publications
+Show only one journal article (Pandey et al., 2024, DBD Micro-Discharges)
+
+Buttons: PDF, arXiv, Peer-reviewed
+
+Remove placeholder conference paper
+
+🚀 Projects Section
+Use cards or project blocks with title, image, description, and tech stack
+
+Include:
+
+CubeSat Design and Telemetry System
+
+GNSS-Based Traffic Congestion Analysis
+
+Saumya Quake → use saumya.png
+
+Vāyu → use vayu.png
+
+Remove Plasma Driver Development and any dummy projects
+
+🧪 Workshops & Colloquia
+Each workshop block must have:
+
+Title, short description, location, date, participation type
+
+Alternating left/right image layout (desktop); stacked on mobile
+
+Button: View Certificate (ensure "V" is not cut off — fix with padding or spacing)
+
+Use images:
+
+Basics of Quantum ESPRESSO → quantum_espresso_logo.png
+
+GNSS Workshop → gnss.png
+
+CubeSat Training → cube.jpg
+
+Experimental Plasma Physics → plasma.png
+
+Quantum Computing → quantum_computing.png
+
+📝 Blog Section
+Show 3 cards with:
+
+Title
+
+Date
+
+Keywords (e.g. “Plasma Physics”, “Quantum Computing”)
+
+Text: Coming Soon
+
+Button: Read more
+
+Add View All Posts link
+
+📬 Contact Section
+Title: Contact Me
+
+Text: invitation for collaborations and inquiries
+
+Email: manish.phy.math@gmail.com
+
+Address: St. Xavier’s College, TU, Kathmandu
+
+Availability: Weekdays, 3–5 PM
+
+Add working Contact Form (Name, Email, Message) and comment: “stored securely in database”
+
+Add links to academic profiles (Google Scholar, ORCID, GitHub if available)
+
+✅ General Improvements
+Ensure mobile responsiveness:
+
+Fix long text overflow on small screens
+
+Stack workshop cards vertically on mobile
+
+Make buttons and text scale appropriately
+
+Use accessible markup and Tailwind for layout
+
+Clean footer:
+
+“© 2025 Manish Pandey. All rights reserved.”
+
+Quick links to all sections
