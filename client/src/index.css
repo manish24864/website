@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 230 69% 31%; /* #1a237e */
+  --primary-light: 237 52% 49%; /* #534bae */
+  --primary-dark: 240 100% 16%; /* #000051 */
+  --primary-foreground: 210 40% 98%;
+  --secondary: 291 68% 41%; /* #7b1fa2 */
+  --secondary-light: 287 64% 58%; /* #ae52d4 */
+  --secondary-dark: 291 100% 23%; /* #4a0072 */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 240 10% 3.9%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 20 14.3% 4.1%;
+  --foreground: 0 0% 95%;
+  --card: 24 9.8% 10%;
+  --card-foreground: 0 0% 95%;
+  --popover: 0 0% 9%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 230 69% 31%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 291 68% 41%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 12 6.5% 15.1%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 85.7% 97.3%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply font-sans text-neutral-800 bg-white antialiased;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-heading font-bold mb-4;
+  }
+  
+  .section-title-bar {
+    @apply w-20 h-1 bg-secondary mx-auto mb-6;
+  }
+  
+  .section-description {
+    @apply text-lg text-neutral-700;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .section-ripple {
+    @apply relative overflow-hidden;
+  }
+  
+  .physics-card {
+    @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg;
+  }
+}
+
+/* Custom Animations */
+.orbit {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  animation: rotate 25s linear infinite;
+}
+
+.orbit::before, .orbit::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.orbit::before {
+  width: 100%;
+  height: 100%;
+  border: 1px dashed rgba(26, 35, 126, 0.3);
+}
+
+.electron {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #7b1fa2;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #ae52d4;
+}
+
+.electron-1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: orbit-1 6s linear infinite;
+}
+
+.electron-2 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: orbit-2 8s linear infinite;
+}
+
+.electron-3 {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: orbit-3 7s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbit-1 {
+  0% { transform: rotate(0deg) translateX(140px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(140px) rotate(-360deg); }
+}
+
+@keyframes orbit-2 {
+  0% { transform: rotate(120deg) translateX(140px) rotate(-120deg); }
+  100% { transform: rotate(480deg) translateX(140px) rotate(-480deg); }
+}
+
+@keyframes orbit-3 {
+  0% { transform: rotate(240deg) translateX(140px) rotate(-240deg); }
+  100% { transform: rotate(600deg) translateX(140px) rotate(-600deg); }
+}
+
+.section-ripple::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(123, 31, 162, 0.05) 0%, rgba(123, 31, 162, 0) 70%);
+  z-index: -1;
+}
+
+.publications-section::before {
+  top: -300px;
+  right: -100px;
+}
+
+.projects-section::before {
+  bottom: -400px;
+  left: -200px;
+}
+
+.bg-physics-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a237e' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
